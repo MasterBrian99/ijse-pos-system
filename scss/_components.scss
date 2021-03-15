@@ -12,6 +12,11 @@
 }
 
 .home {
+  display: none;
+}
+
+.home,
+.customer {
   padding-top: 65px;
   min-height: 100vh;
   max-height: 100%;
@@ -45,4 +50,14 @@
       color: $font-base-color;
     }
   }
+}
+
+.customer-form {
+  box-shadow: $border-shadow;
+  border-radius: $container-radius;
+}
+
+input[type="text"] {
+  background-color: #283046;
+  color: #fff;
 }

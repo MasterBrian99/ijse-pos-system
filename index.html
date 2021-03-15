@@ -12,10 +12,10 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/b294eb53b8.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <!-- main css  -->
     <link rel="stylesheet" href="./css/main.css" />
 
@@ -40,10 +40,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                id="home_click"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Customer</a>
+              <a class="nav-link" href="#" id="customer_click">Customer</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Orders</a>
@@ -58,8 +64,7 @@
         </div>
       </div>
     </nav>
-
-    <section class="home container-fluid">
+    <section class="home container-fluid" id="home_section">
       <div class="home-main row justify-content-start">
         <div
           class="home-main_info col-lg-6 col-md-12 col-sm-12 m-lg-3 m-md-2 m-sm-1 d-flex justify-content-center flex-column align-items-center"
@@ -118,6 +123,61 @@
             </table>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="customer container" id="customer_section">
+      <div class="customer-form mt-5">
+        <div class="d-flex flex-column">
+          <input
+            type="text"
+            aria-label="NIC"
+            class="form-control mt-5"
+            placeholder="NIC"
+            id="CustomerNIC"
+          />
+          <input
+            type="text"
+            aria-label="First name"
+            class="form-control mt-5"
+            placeholder="First name"
+            id="CustomerFirst_name"
+          />
+          <input
+            type="text"
+            aria-label="Last name"
+            class="form-control mt-5"
+            placeholder="Last name"
+            id="CustomerLast_name"
+          />
+
+          <input
+            type="text"
+            aria-label="city"
+            class="form-control mt-5"
+            placeholder="City"
+            id="CustomerCity"
+          />
+        </div>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-danger m-3 mr -auto" id="add_customer">
+            Add Customer
+          </button>
+        </div>
+      </div>
+      <div class="customer-details mt-5">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">NIC</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">City</th>
+            </tr>
+          </thead>
+          <tbody id="customer_tbl"></tbody>
+        </table>
       </div>
     </section>
 
