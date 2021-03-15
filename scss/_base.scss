@@ -1,0 +1,24 @@
+// contained within this file are all your resets, variables, mixins, and any utility classes.
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+$base-color: #161d30;
+$primary-color: #283046;
+$border-shadow: 0 4px 24px 0 rgb(34, 41, 47);
+$container-radius: 7px;
+$secondary-color: #6a60dd;
+$font-base-color: #d0d2d6;
+
+* {
+  color: #fff;
+}
+
+html {
+  //   font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  //   font-size: 62.5%;
+  background-color: $base-color;
+  min-height: 100vh;
+  color: #fff;
+}
