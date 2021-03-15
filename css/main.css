@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  color: #fff;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #161d30;
+  min-height: 100vh;
+  color: #fff;
+}
+.nav-main {
+  background-color: #283046;
+}
+.nav-main a {
+  color: #d0d2d6;
+}
+.nav-main a:hover {
+  color: #fff;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.home,
+.customer {
+  padding-top: 65px;
+  min-height: 100vh;
+  max-height: 100%;
+  width: 100%;
+}
+.home-main {
+  height: 100%;
+}
+.home-main_info {
+  -webkit-box-shadow: 0 4px 24px 0 #22292f;
+  box-shadow: 0 4px 24px 0 #22292f;
+  background-color: #6a60dd;
+  border-radius: 7px;
+}
+.home-main_profit {
+  -webkit-box-shadow: 0 4px 24px 0 #22292f;
+  box-shadow: 0 4px 24px 0 #22292f;
+  border-radius: 7px;
+  background-color: #283046;
+}
+.home-main_profit h4 {
+  color: #d0d2d6;
+}
+.home-main_customers {
+  -webkit-box-shadow: 0 4px 24px 0 #22292f;
+  box-shadow: 0 4px 24px 0 #22292f;
+  border-radius: 7px;
+  background-color: #283046;
+}
+.home-main_customers h4 {
+  color: #d0d2d6;
+}
+.customer-form {
+  -webkit-box-shadow: 0 4px 24px 0 #22292f;
+  box-shadow: 0 4px 24px 0 #22292f;
+  border-radius: 7px;
+}
+input[type="text"] {
+  background-color: #283046;
+  color: #fff;
+}
