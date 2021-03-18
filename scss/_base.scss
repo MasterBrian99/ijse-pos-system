@@ -1,12 +1,11 @@
 // contained within this file are all your resets, variables, mixins, and any utility classes.
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
-$base-color: #161d30;
-$primary-color: #283046;
-$border-shadow: 0 4px 24px 0 rgb(34, 41, 47);
-$container-radius: 7px;
-$secondary-color: #6a60dd;
-$font-base-color: #d0d2d6;
+$background-color-dark: #161d30;
+$primary-color-dark: #283046;
+$box-shadow-dark: 0 4px 24px 0 rgba(34, 41, 47, 0.24);
+$secondary-color: #7367f0;
+$main-responsive-breakpoint: 678px;
 
 * {
   color: #fff;
@@ -15,10 +14,15 @@ $font-base-color: #d0d2d6;
 html {
   //   font-size: 62.5%;
 }
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: $background-color-dark;
   //   font-size: 62.5%;
-  background-color: $base-color;
-  min-height: 100vh;
+  min-height: 200vh;
   color: #fff;
+}
+
+main {
+  padding: 0 2rem;
 }

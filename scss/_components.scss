@@ -1,63 +1,35 @@
 // anything reusable such as buttons, navbars, cards etc.
 
-.nav-main {
-  background-color: #283046;
-  a {
-    color: #d0d2d6;
-    &:hover {
-      color: #fff;
-      transition: all 500ms;
-    }
-  }
-}
-
-.home {
-  display: none;
-}
-
-.home,
-.customer {
-  padding-top: 65px;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-}
-
-.home-main {
-  height: 100%;
-  &_info {
-    box-shadow: $border-shadow;
-    background-color: $secondary-color;
-    border-radius: $container-radius;
-  }
-  &_profit {
-    box-shadow: $border-shadow;
-    border-radius: $container-radius;
-
-    background-color: $primary-color;
-
-    h4 {
-      color: $font-base-color;
-    }
-  }
-
-  &_customers {
-    box-shadow: $border-shadow;
-    border-radius: $container-radius;
-    background-color: $primary-color;
-
-    h4 {
-      color: $font-base-color;
-    }
-  }
-}
-
-.customer-form {
-  box-shadow: $border-shadow;
-  border-radius: $container-radius;
-}
-
-input[type="text"] {
-  background-color: #283046;
+.components-btn {
   color: #fff;
+  border-color: transparent;
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 0.358rem;
+  margin-right: 1rem;
+  font-weight: 300;
+
+  &:hover {
+    border-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    background-color: $background-color-dark;
+    cursor: pointer;
+    // box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+  }
+  &:focus {
+    background-color: $secondary-color;
+
+    outline: none;
+  }
+}
+// $secondary-color
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Source Sans Pro", sans-serif;
 }

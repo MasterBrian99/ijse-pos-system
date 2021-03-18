@@ -1,0 +1,10 @@
+@keyframes sidebar_animation {
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
