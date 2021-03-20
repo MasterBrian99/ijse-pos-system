@@ -1,0 +1,68 @@
+.customer {
+  &_main {
+    @media (max-width: $second-responsive-breakpoint) {
+      flex-direction: column;
+    }
+  }
+  &-form {
+    background-color: $primary-color-dark;
+    border-radius: $main-radius;
+    box-shadow: $box-shadow-dark;
+    padding: 1rem;
+    // margin: 1rem;
+    width: 40rem;
+    label {
+      color: $font-main-dark;
+      font-size: 1rem;
+    }
+    input {
+      padding: 0.3rem;
+      border-radius: $main-radius;
+      border: 0.2px solid rgb(146, 146, 146);
+      font-size: 1.3rem;
+      color: #fff;
+      background-color: $primary-color-dark;
+
+      &:focus {
+        border: 0.2px solid $secondary-color;
+        transition: 500ms;
+        outline: none;
+        &::placeholder {
+          padding-left: 0.5rem;
+          transition: 500ms;
+        }
+      }
+    }
+    &_button {
+      margin: 1.4rem 0;
+      button {
+        margin: 0 0.5rem;
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+
+      &__save {
+        background-color: $secondary-color;
+      }
+      &__update {
+        background-color: #00cc14;
+      }
+      &__remove {
+        background-color: #ea5455;
+      }
+    }
+    @media (max-width: $second-responsive-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  &_table {
+    margin-left: 2rem;
+    width: 100%;
+
+    @media (max-width: $second-responsive-breakpoint) {
+      margin: 1rem 0;
+    }
+  }
+}

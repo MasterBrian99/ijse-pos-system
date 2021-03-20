@@ -14,10 +14,7 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
     <link rel="stylesheet" href="./css/main.css" />
 
     <title>Document</title>
@@ -63,15 +60,17 @@
       >
         <button class="components-btn">Dashboard</button>
         <button class="components-btn">Customer</button>
-        <button class="components-btn">Order</button>
         <button class="components-btn">Item</button>
+        <button class="components-btn">Order</button>
       </div>
     </section>
 
     <main>
-      <section class="dashboard">
-        <div class="is-flex is-flex-direction-column">
-          <div class="statistics"></div>
+      <section class="order">
+        <div class="is-flex is-justify-content-space-between">
+          <div class="order-invoice_details"></div>
+          <div class="order-item_select"></div>
+          <div class="order-total"></div>
         </div>
       </section>
     </main>

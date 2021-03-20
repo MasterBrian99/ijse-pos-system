@@ -119,6 +119,13 @@
   }
 }
 
-.dashboard {
-  padding-top: 10rem;
+.dashboard,
+.customer,
+.item,
+.order {
+  padding-top: 11.5rem;
+
+  @media (max-width: $main-responsive-breakpoint) {
+    padding-top: 5rem;
+  }
 }
