@@ -1,0 +1,130 @@
+.order {
+  &-main {
+    @media (max-width: $second-responsive-breakpoint) {
+      flex-direction: column;
+    }
+  }
+  width: 100%;
+  &-invoice_details {
+    height: 30rem;
+
+    border-radius: $main-radius;
+    box-shadow: $box-shadow-dark;
+    padding-bottom: 1rem;
+    background-color: $primary-color-dark;
+    &_header {
+      height: 3rem;
+      padding: 0.5rem;
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    &_input {
+      padding: 0 1rem;
+
+      &__set,
+      &__set2 {
+        margin: 0 0.5rem;
+        label {
+          color: $font-main-dark;
+          font-size: 1rem;
+        }
+        input {
+          padding: 0.3rem;
+          border-radius: $main-radius;
+          border: 0.2px solid rgb(146, 146, 146);
+          font-size: 1.3rem;
+          color: #fff;
+          background-color: $primary-color-dark;
+
+          &:focus {
+            border: 0.2px solid $secondary-color;
+            transition: 500ms;
+            outline: none;
+            &::placeholder {
+              padding-left: 0.5rem;
+              transition: 500ms;
+            }
+          }
+        }
+
+        &2 {
+          margin: 0 1.5rem;
+        }
+      }
+      @media (max-width: $main-responsive-breakpoint) {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: $second-responsive-breakpoint) {
+      margin-bottom: 1rem;
+      height: 100%;
+    }
+  }
+
+  &-item_select {
+    margin-left: 0.5rem;
+    height: 30rem;
+    padding-bottom: 1rem;
+
+    border-radius: $main-radius;
+    box-shadow: $box-shadow-dark;
+    background-color: $primary-color-dark;
+
+    &_header {
+      height: 3rem;
+      padding: 0.5rem;
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    &_form_input {
+      padding: 0 1rem;
+      margin: 1rem 0;
+      &__set,
+      &__set2 {
+        margin: 0 0.5rem;
+        label {
+          color: $font-main-dark;
+          font-size: 1rem;
+        }
+        input {
+          padding: 0.3rem;
+          border-radius: $main-radius;
+          border: 0.2px solid rgb(146, 146, 146);
+          font-size: 1.3rem;
+          color: #fff;
+          background-color: $primary-color-dark;
+
+          &:focus {
+            border: 0.2px solid $secondary-color;
+            transition: 500ms;
+            outline: none;
+            &::placeholder {
+              padding-left: 0.5rem;
+              transition: 500ms;
+            }
+          }
+        }
+
+        &2 {
+          margin: 0 1.5rem;
+        }
+      }
+      @media (max-width: $main-responsive-breakpoint) {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: $second-responsive-breakpoint) {
+      margin-left: 0;
+    }
+  }
+
+  &-total {
+    height: 30rem;
+    border-radius: $main-radius;
+    box-shadow: $box-shadow-dark;
+    padding: 1rem;
+    background-color: $primary-color-dark;
+  }
+}

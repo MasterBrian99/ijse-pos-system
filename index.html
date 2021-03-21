@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
     <title>Document</title>
   </head>
@@ -67,10 +67,123 @@
 
     <main>
       <section class="order">
+        <div class="is-flex is-justify-content-space-between order-main">
+          <div class="order-invoice_details is-flex-grow-3">
+            <div class="order-invoice_details_header">
+              <h3>Invoice Details</h3>
+            </div>
+            <div class="order-invoice_details_form">
+              <form action="">
+                <div
+                  class="order-invoice_details_input is-flex is-justify-content-space-between"
+                >
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                </div>
+                <div
+                  class="order-invoice_details_input is-flex is-justify-content-space-between"
+                >
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                </div>
+                <div
+                  class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
+                >
+                  <label>Item Name</label>
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div
+                  class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
+                >
+                  <label>Item QTY</label>
+                  <input type="text" placeholder="Qty" />
+                </div>
+                <div
+                  class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
+                >
+                  <label>Item Price</label>
+                  <input type="text" placeholder="Price" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="order-item_select is-flex-grow-3">
+            <div class="order-item_select_header">
+              <h3>Item Select</h3>
+            </div>
+            <div class="order-item_select_form">
+              <form action="">
+                <div
+                  class="order-item_select_form_input is-flex is-justify-content-space-between"
+                >
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                </div>
+                <div
+                  class="order-item_select_form_input is-flex is-justify-content-space-between"
+                >
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                  <div
+                    class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
+                  >
+                    <label>Item Code</label>
+                    <input type="text" placeholder="Code" />
+                  </div>
+                </div>
+                <div
+                  class="customer-form_input is-flex is-flex-direction-column order-item_select_form_input__set2"
+                >
+                  <label>Item Name</label>
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div
+                  class="customer-form_input is-flex is-flex-direction-column order-item_select_form_input__set2"
+                >
+                  <label>Item QTY</label>
+                  <input type="text" placeholder="Qty" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="is-flex is-justify-content-space-between">
-          <div class="order-invoice_details"></div>
-          <div class="order-item_select"></div>
-          <div class="order-total"></div>
+          <h1>Hello Hello</h1>
+          <h1>Hello Hello</h1>
         </div>
       </section>
     </main>
@@ -82,6 +195,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/UIController.js"></script>
+    <script src="./controller/UiController.js"></script>
   </body>
 </html>
