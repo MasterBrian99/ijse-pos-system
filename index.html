@@ -34,10 +34,18 @@
             class="nav-section_sidebar__items is-flex is-flex-direction-column is-align-items-center"
           >
             <ul>
-              <li><i class="fas fa-chart-line"></i> Dashboard</li>
-              <li><i class="fas fa-shopping-cart"></i> Order</li>
-              <li><i class="fas fa-user-friends"></i> Customer</li>
-              <li><i class="fas fa-hotdog"></i> Item</li>
+              <li class="components-main_btn" data-name="dashboard">
+                <i class="fas fa-chart-line"></i> Dashboard
+              </li>
+              <li class="components-main_btn" data-name="customer">
+                <i class="fas fa-user-friends"></i> Customer
+              </li>
+              <li class="components-main_btn" data-name="item">
+                <i class="fas fa-hotdog"></i> Item
+              </li>
+              <li class="components-main_btn" data-name="order">
+                <i class="fas fa-shopping-cart"></i> Order
+              </li>
             </ul>
           </div>
         </div>
@@ -58,14 +66,222 @@
       <div
         class="is-flex is-flex-direction-row is-align-items-center secondary-nav"
       >
-        <button class="components-btn">Dashboard</button>
-        <button class="components-btn">Customer</button>
-        <button class="components-btn">Item</button>
-        <button class="components-btn">Order</button>
+        <button
+          class="components-btn components-main_btn components-main_btn__dashboard"
+          data-name="dashboard"
+        >
+          Dashboard
+        </button>
+        <button
+          class="components-btn components-main_btn components-main_btn__customer"
+          data-name="customer"
+        >
+          Customer
+        </button>
+        <button
+          class="components-btn components-main_btn components-main_btn__item"
+          data-name="item"
+        >
+          Item
+        </button>
+        <button
+          class="components-btn components-main_btn components-main_btn__order"
+          data-name="order"
+        >
+          Order
+        </button>
       </div>
     </section>
 
     <main>
+      <section class="dashboard">
+        <div class="is-flex is-flex-direction-column">
+          <div class="statistics">
+            <div
+              class="statistics-text is-flex is-justify-content-space-between"
+            >
+              <h2>Statistics</h2>
+              <h3>Last Updated 2020-01-01</h3>
+            </div>
+            <div
+              class="is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center statistics-info"
+            >
+              <div>
+                <i class="fas fa-users"></i>
+                <h3 id="customer_total">555k</h3>
+                <h4>Customer</h4>
+              </div>
+              <div>
+                <i class="fas fa-sort-amount-up"></i>
+                <h3>555k</h3>
+                <h4>Order</h4>
+              </div>
+              <div>
+                <i class="fas fa-cookie-bite"></i>
+                <h3 id="item_total">555k</h3>
+                <h4>Item</h4>
+              </div>
+              <div>
+                <i class="fas fa-money-check-alt"></i>
+                <h3>555k</h3>
+                <h4>Revenue</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-table">
+          <div class="dashboard-table_customer">
+            <h1>Customer</h1>
+            <table class="table is-fullwidth dashboard-table_customer__table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody class="customer-tbl__body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------- -->
+
+      <section class="customer">
+        <div class="is-flex is-justify-content-space-between customer_main">
+          <div class="customer-form">
+            <form action="">
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Customer ID</label>
+                <input
+                  type="text"
+                  placeholder="Customer ID"
+                  id="customer_id_input"
+                />
+                <!-- <span class="customer_warning_id">hello</span> -->
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Customer Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  id="customer_name_input"
+                />
+                <span class="customer_warning_name"
+                  >minimum length 7.space allowed</span
+                >
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Customer Address</label>
+                <input
+                  type="text"
+                  placeholder="Address"
+                  id="customer_address_input"
+                />
+                <span class="customer_warning_address"
+                  >minimum length 10.space allowed</span
+                >
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Customer Salary</label>
+                <input
+                  type="text"
+                  placeholder="Salary"
+                  id="customer_salary_input"
+                />
+                <span class="customer_warning_salary"
+                  >Do not use characters</span
+                >
+              </div>
+              <div
+                class="customer-form_button field is-grouped is-grouped-right"
+              >
+                <button class="components-btn customer-form_button__save">
+                  Save
+                </button>
+                <button class="components-btn customer-form_button__update">
+                  Update
+                </button>
+                <button class="components-btn customer-form_button__remove">
+                  Remove
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="customer_table">
+            <table class="table is-fullwidth dashboard-table_customer__table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody class="customer-tbl__body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="item">
+        <div class="is-flex is-justify-content-space-between customer_main">
+          <div class="customer-form">
+            <form action="">
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Item Code</label>
+                <input type="text" placeholder="Code" id="item-code_input" />
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Item Name</label>
+                <input type="text" placeholder="Name" id="item-name_input" />
+                <span class="item_warning_name"
+                  >minimum 5 max 20.space allowed
+                </span>
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Item QTY</label>
+                <input type="text" placeholder="Qty" id="item-qty_input" />
+                <span class="item_warning_qty">numbers only </span>
+              </div>
+              <div class="customer-form_input is-flex is-flex-direction-column">
+                <label>Item Price</label>
+                <input type="text" placeholder="Price" id="item-price_input" />
+                <span class="item_warning_price">numbers only </span>
+              </div>
+              <div
+                class="customer-form_button field is-grouped is-grouped-right"
+              >
+                <button class="components-btn item-form_button__save">
+                  Save
+                </button>
+                <button class="components-btn item-form_button__update">
+                  Update
+                </button>
+                <button class="components-btn item-form_button__remove">
+                  Remove
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="customer_table">
+            <table class="table is-fullwidth dashboard-table_customer__table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody class="item-table_body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section class="order">
         <div class="is-flex is-justify-content-space-between order-main">
           <div class="order-invoice_details is-flex-grow-3">
@@ -195,6 +411,11 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="./db/DB.js"></script>
     <script src="./controller/UiController.js"></script>
+    <script src="./dto/CustomerDTO.js"></script>
+    <script src="./dto/ItemDTO.js"></script>
+    <script src="./controller/CustomerController.js"></script>
+    <script src="./controller/ItemController.js"></script>
   </body>
 </html>

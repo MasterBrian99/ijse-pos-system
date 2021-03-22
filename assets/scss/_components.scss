@@ -19,10 +19,16 @@
     // box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
   }
   &:focus {
-    background-color: $secondary-color;
-
+    // background-color: $secondary-color;
+    background-color: transparent;
     outline: none;
   }
+  // &:disabled,
+  // &[disabled] {
+  //   border: 1px solid #999999;
+  //   background-color: #cccccc;
+  //   color: #666666;
+  // }
 }
 // $secondary-color
 body,
@@ -32,4 +38,11 @@ optgroup,
 select,
 textarea {
   font-family: "Source Sans Pro", sans-serif;
+}
+.disable-btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
