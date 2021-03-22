@@ -296,14 +296,24 @@
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Order ID</label>
+                    <input
+                      type="text"
+                      placeholder="Order ID"
+                      id="order_id"
+                      readonly
+                    />
                   </div>
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Date</label>
+                    <input
+                      type="text"
+                      placeholder="Date"
+                      id="current_date"
+                      readonly
+                    />
                   </div>
                 </div>
                 <div
@@ -312,33 +322,56 @@
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Customer</label>
+                    <select
+                      name="Customer ID"
+                      class="order-customer_id"
+                    ></select>
                   </div>
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-invoice_details_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Customer ID</label>
+                    <input
+                      type="text"
+                      placeholder="Customer ID"
+                      id="order_customer_id"
+                      readonly
+                    />
                   </div>
                 </div>
                 <div
                   class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
                 >
-                  <label>Item Name</label>
-                  <input type="text" placeholder="Name" />
+                  <label>Customer Name</label>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    id="order_customer_name"
+                    readonly
+                  />
                 </div>
                 <div
                   class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
                 >
-                  <label>Item QTY</label>
-                  <input type="text" placeholder="Qty" />
+                  <label>Customer Salary</label>
+                  <input
+                    type="text"
+                    placeholder="Salary"
+                    id="order_customer_salary"
+                    readonly
+                  />
                 </div>
                 <div
                   class="customer-form_input is-flex is-flex-direction-column order-invoice_details_input__set2"
                 >
-                  <label>Item Price</label>
-                  <input type="text" placeholder="Price" />
+                  <label>Customer Address</label>
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    id="order_customer_address"
+                    readonly
+                  />
                 </div>
               </form>
             </div>
@@ -355,14 +388,19 @@
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Item </label>
+                    <select name="Customer ID" class="order-item_id"></select>
                   </div>
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Item Name</label>
+                    <input
+                      type="text"
+                      placeholder="Item Name"
+                      id="order_item_name"
+                      readonly
+                    />
                   </div>
                 </div>
                 <div
@@ -371,35 +409,78 @@
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Item Qty</label>
+                    <input
+                      type="text"
+                      placeholder="Item Qty"
+                      id="order_item_qty"
+                      readonly
+                    />
                   </div>
                   <div
                     class="is-flex is-flex-direction-column is-flex-grow-1 order-item_select_form_input__set"
                   >
-                    <label>Item Code</label>
-                    <input type="text" placeholder="Code" />
+                    <label>Item Price</label>
+                    <input
+                      type="text"
+                      placeholder="Item Price"
+                      id="order_item_price"
+                      readonly
+                    />
                   </div>
                 </div>
+
                 <div
                   class="customer-form_input is-flex is-flex-direction-column order-item_select_form_input__set2"
                 >
-                  <label>Item Name</label>
-                  <input type="text" placeholder="Name" />
+                  <label>Order QTY</label>
+                  <input type="text" placeholder="Qty" id="order_qty" />
                 </div>
                 <div
-                  class="customer-form_input is-flex is-flex-direction-column order-item_select_form_input__set2"
+                  class="customer-form_input is-flex order-item_select_form_input__set2 is-justify-content-flex-end"
                 >
-                  <label>Item QTY</label>
-                  <input type="text" placeholder="Qty" />
+                  <button class="components-btn btn-add_order">Add Item</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <div class="is-flex is-justify-content-space-between">
-          <h1>Hello Hello</h1>
-          <h1>Hello Hello</h1>
+        <div class="is-flex is-justify-content-space-between order-total_form">
+          <div
+            class="order-total_form__balance is-flex is-flex-direction-column"
+          >
+            <h1>Total: <span id="total_price">20000.00</span></h1>
+            <h1>Subtotal: <span>20000.00</span></h1>
+
+            <div
+              class="order-total_form__balance_info is-flex is-flex-direction-column"
+            >
+              <label>Cash</label>
+
+              <input type="text" placeholder="Cash" />
+              <label>Discount</label>
+              <input type="text" placeholder="Discount" />
+              <label>Balance</label>
+              <input type="text" placeholder="Balance" />
+            </div>
+            <div class="is-flex is-justify-content-flex-end">
+              <button class="components-btn btn-add_purchase">Purchase</button>
+            </div>
+          </div>
+          <div class="order-total_form__table">
+            <table class="table is-fullwidth order-total_form__table_tbl">
+              <thead>
+                <tr>
+                  <th>Item Code</th>
+                  <th>Item Name</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody class="order-table_body"></tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
@@ -415,7 +496,9 @@
     <script src="./controller/UiController.js"></script>
     <script src="./dto/CustomerDTO.js"></script>
     <script src="./dto/ItemDTO.js"></script>
+    <script src="./dto/OrderDTO.js"></script>
     <script src="./controller/CustomerController.js"></script>
     <script src="./controller/ItemController.js"></script>
+    <script src="./controller/OrderController.js"></script>
   </body>
 </html>
